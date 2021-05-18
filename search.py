@@ -8,7 +8,9 @@ def kimetsu_search(word):
     source=list(df["name"])
 
     # 検索
-    if word in source:
+    if word == "":
+        print("名前を入力してください")
+    elif word in source:
         print("『{}』はあります".format(word))
     else:
         print("『{}』はありません".format(word))
